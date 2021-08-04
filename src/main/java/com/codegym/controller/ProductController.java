@@ -16,7 +16,7 @@ public class ProductController {
 
     @GetMapping("/products")
     public ModelAndView home() {
-        ModelAndView modelAndView = new ModelAndView("/product/list");
+        ModelAndView modelAndView = new ModelAndView("product/list");
         modelAndView.addObject("products", productService.findAll());
         return modelAndView;
     }
